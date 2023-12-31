@@ -1,6 +1,14 @@
 import streamlit as st
 import pickle
+import os
 import pandas as pd
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8501))
+    st.set_option('server.port', port)
+    st.write("Running on port:", port)
+    st.run()
+
 
 teams = ['Sunrisers Hyderabad',
  'Mumbai Indians',
